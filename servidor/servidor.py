@@ -27,7 +27,6 @@ def tratar_mensagem(mensagem):
     l = mensagem.split("-")
     envia = ''
     if l[0] == '-1':
-        banco.botao_sair()
         envia = "-1"
     elif l[0] == '-2':
         envia = "-2"
@@ -130,7 +129,7 @@ def tratar_mensagem(mensagem):
             print("Falha ao adicionar o jogo ao banco de dados.")
     elif l[0] == '12':
         resultados = banco.carregar_jogos_adm()
-        envia = '\n'.join(' {} | {} | ({})'.format(r[0], r[1], r[2]) for r in resultados)
+        envia = '\n'.join(' {} | {}  ({})'.format(r[0], r[1], r[2]) for r in resultados)
         print(envia)
     elif l[0] == '13':
         jogo_id = int(l[1])

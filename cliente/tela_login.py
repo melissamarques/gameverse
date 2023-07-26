@@ -2,33 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class TelaLogin(object):
-    """
-    Configura a interface do usuário para a tela de login do usuário.
-
-    ...
-
-    Methods
-    -------
-    setupUi(self, MainWindow)
-        Configura a interface gráfica da janela principal.
-
-    retranslateUi(self, MainWindow)
-        Configura as traduções dos textos exibidos na interface do usuário.
-    """
-
     def setupUi(self, MainWindow):
-        """
-        Configura a interface gráfica da janela principal.
-
-        Essa função configura a interface gráfica da janela principal. Ela define os componentes da
-        interface, suas posições e estilos.
-
-        Parameters
-        ----------
-        MainWindow : QtWidgets.QMainWindow
-            O objeto da janela principal.
-        """
-
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(639, 443)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -61,8 +35,11 @@ class TelaLogin(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(290, 270, 75, 23))
         self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(540, 10, 75, 23))
+        self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(20, 10, 75, 23))
+        self.pushButton_4.setGeometry(QtCore.QRect(10, 10, 75, 23))
         self.pushButton_4.setObjectName("pushButton_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -80,19 +57,6 @@ class TelaLogin(object):
         MainWindow.setTabOrder(self.pushButton, self.pushButton_2)
 
     def retranslateUi(self, MainWindow):
-        """
-        Configura as traduções dos textos exibidos na interface do usuário.
-
-        Essa função configura as traduções dos textos exibidos na interface
-        do usuário. Essa função é responsável por configurar as traduções dos textos na
-        interface do usuário, permitindo que o aplicativo exiba os textos em diferentes idiomas. 
-
-        Parameters
-        ----------
-        MainWindow : QtWidgets.QMainWindow
-            O objeto da janela principal.
-        """
-        
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:22pt;\">GameVerse</span></p></body></html>"))
@@ -102,7 +66,8 @@ class TelaLogin(object):
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">Senha:</span></p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">Novo por aqui?</span></p></body></html>"))
         self.pushButton_2.setText(_translate("MainWindow", "Cadastre-se"))
-        self.pushButton_4.setText(_translate("MainWindow", "Administrador"))
+        self.pushButton_3.setText(_translate("MainWindow", "Fechar"))
+        self.pushButton_4.setText(_translate("MainWindow", "Admnistrador"))
 
 
 if __name__ == "__main__":

@@ -205,6 +205,7 @@ class Main(QMainWindow, MainMultitelas):
 
         self.tela_login.pushButton.clicked.connect(self.login)
         self.tela_login.pushButton_2.clicked.connect(self.abrirTelaCadastrar)
+        self.tela_login.pushButton_3.clicked.connect(self.fechar)
         self.tela_login.pushButton_4.clicked.connect(self.abrirTelaLoginADM)
 
         self.tela_cadastrar.pushButton.clicked.connect(self.botao_cadastrar)
@@ -714,6 +715,7 @@ class Main(QMainWindow, MainMultitelas):
 
         self.QtStack.setCurrentIndex(0)
 
+
     def abrirTelaCadastrar(self):
         """
         Abre a tela de cadastro de novos usuários.
@@ -773,6 +775,13 @@ class Main(QMainWindow, MainMultitelas):
 
         self.QtStack.setCurrentIndex(7)
         self.carregarJogosADM()
+
+    def fechar(self):
+        mensagem = "-1,"
+        resposta = self.cliente.enviar(mensagem)
+        print(resposta)
+        exit()
+        # QCoreApplication.instance().quit()
 
 if __name__ == '__main__':
     import sys
